@@ -1,4 +1,4 @@
-# classificador de imagem
+# Classificador de imagem
 
 Este projeto implementa um classificador de imagens utilizando uma Rede Neural Convolucional (CNN) treinada no conjunto de dados CIFAR-10. O classificador é capaz de identificar 10 categorias diferentes de imagens.
 
