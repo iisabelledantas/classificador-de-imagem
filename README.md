@@ -48,7 +48,7 @@ pip install tensorflow streamlit opencv-python Pillow
 python model.py
 ```
 
-### Utilização do Visualizador
+### 4. Utilização do Visualizador
 
 O visualizador é uma aplicação web interativa construída com Streamlit. Para iniciá-lo, execute:
 
@@ -60,84 +60,6 @@ Após executar o comando, uma nova aba será aberta em seu navegador com a inter
 
 1.  **Usar Webcam**: Permite capturar uma imagem diretamente da sua webcam para classificação.
 2.  **Upload de Imagem**: Permite fazer o upload de um arquivo de imagem do seu computador para classificação.
-
-O visualizador exibirá a classe prevista e a confiança da previsão para a imagem fornecida.
-
-## Métricas de Desempenho
-
-O script de treinamento (`train_cifar10.py`) fornece a acurácia do modelo durante o processo de treinamento. Para uma avaliação mais completa do desempenho do classificador, incluindo métricas como precisão e recall, seria necessário executar um script de avaliação separado após o treinamento, utilizando o conjunto de dados de teste. Abaixo, um exemplo de como essas métricas poderiam ser apresentadas:
-
-| Métrica   | Valor (Exemplo) |
-|-----------|-----------------|
-| Acurácia  | 0.85            |
-| Precisão  | 0.82            |
-| Recall    | 0.80            |
-
-# Classificador de Imagens CIFAR-10
-
-Este projeto implementa um classificador de imagens utilizando uma Rede Neural Convolucional (CNN) treinada no conjunto de dados CIFAR-10. O classificador é capaz de identificar 10 categorias diferentes de imagens.
-
-## Algoritmo e Treinamento
-
-O classificador é construído com uma Rede Neural Convolucional (CNN) utilizando a biblioteca TensorFlow/Keras. A arquitetura do modelo inclui camadas convolucionais (Conv2D), de pooling (MaxPooling2D), de achatamento (Flatten) e densas (Dense), com uma camada de Dropout para regularização. O modelo é compilado com o otimizador Adam e a função de perda `categorical_crossentropy`.
-
-O treinamento foi realizado no conjunto de dados CIFAR-10, que consiste em 60.000 imagens coloridas de 32x32 pixels em 10 classes, com 6.000 imagens por classe. As imagens foram normalizadas para o intervalo [0, 1] e as etiquetas foram convertidas para o formato one-hot encoding. O modelo foi treinado por 10 épocas.
-
-### Categorias de Imagens
-
-O classificador é capaz de identificar imagens nas seguintes 10 categorias:
-
-*   Avião
-*   Automóvel
-*   Pássaro
-*   Gato
-*   Veado
-*   Cachorro
-*   Sapo
-*   Cavalo
-*   Navio
-*   Caminhão
-
-## Desempenho do Classificador
-
-Durante o treinamento, a acurácia do modelo foi monitorada. Para obter métricas de desempenho mais detalhadas, como precisão e recall, seria necessário executar uma avaliação pós-treinamento utilizando um conjunto de dados de teste. O script de treinamento (`train_cifar10.py`) salva o modelo treinado como `cifar10_model.h5`.
-
-## Como Executar o Projeto
-
-Para executar este projeto, siga os passos abaixo:
-
-### Pré-requisitos
-
-Certifique-se de ter o Python 3 e o pip instalados. As dependências do projeto podem ser instaladas via `pip`.
-
-### Instalação das Dependências
-
-Crie um ambiente virtual (opcional, mas recomendado) e instale as bibliotecas necessárias:
-
-```bash
-pip install tensorflow streamlit opencv-python Pillow
-```
-
-### Treinamento do Modelo (Opcional)
-
-Se você deseja treinar o modelo do zero, execute o script de treinamento. Isso irá baixar o conjunto de dados CIFAR-10, treinar o modelo e salvá-lo como `cifar10_model.h5` e os nomes das classes como `class_names.json`.
-
-```bash
-python train_cifar10.py
-```
-
-### Utilização do Visualizador
-
-O visualizador é uma aplicação web interativa construída com Streamlit. Para iniciá-lo, execute:
-
-```bash
-streamlit run app.py
-```
-
-Após executar o comando, uma nova aba será aberta em seu navegador com a interface do classificador. Você terá duas opções para classificar imagens:
-
-1.  **Usar Webcam**: Permite capturar uma imagem diretamente da sua webcam para classificação.
-2.  **Upload de Imagem**: Permite fazer o upload de um arquivo de imagem (JPG, JPEG, PNG) do seu computador para classificação.
 
 O visualizador exibirá a classe prevista e a confiança da previsão para a imagem fornecida.
 
