@@ -31,7 +31,9 @@ Para executar este projeto, siga os passos abaixo:
 
 ```bash
 python -m venv venv
-source venv/bin/activate  # No Windows: venv\Scripts\activate
+source venv/bin/activate
+# No Windows:
+venv\Scripts\activate
 ```
 
 ### 2. Instalação das Dependências
